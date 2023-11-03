@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "jacobmgevans/demo/README.md",
+                "file": "remix-vite/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "jacobmgevans/demo/README.md",
+                "file": "remix-vite/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "jacobmgevans/demo/README.md",
+                "file": "remix-vite/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "jacobmgevans/demo/README.md"
+                "file": "remix-vite/README.md"
               }
             }
           }
@@ -148,7 +148,20 @@
   },
   "active": "f281dbfe820acc6d",
   "lastOpenFiles": [
+    "github/Github.md",
+    "remix-vite/README.md",
+    "remix-vite",
+    "github/Untitled.md",
+    "joshcomeau/README.md",
+    "github/github_actions/github-actions.md",
+    "github/github_actions/github-actions.pdf",
+    "github/github_actions/git-review.md",
+    "github/slides-2022.pdf",
+    "github/github_actions",
+    "github",
     "jacobmgevans/demo/README.md",
+    "jacobmgevans/demo/marcs-observable.md",
+    "joshcomeau",
     "jacobmgevans/demo",
     "jacobmgevans"
   ]
