@@ -37,11 +37,16 @@ export default defineConfig({
 
 - swap the @remix-run/dev/dist folder out for the custom built one in the remix fork monorepo with the update to the vite plugin compiler setting
 ```sh
-rm -rf /home/bronifty/codes/remixDir/1-mig-remix-vite/node_modules/@remix-run/dev/dist/
-cp -r /home/bronifty/codes/remixDir/remix/build/node_modules/@remix-run/dev/dist /ho
-me/bronifty/codes/remixDir/1-mig-remix-vite/node_modules/@remix-run/dev
+rm -rf node_modules/@remix-run/dev/dist
+cp -r /home/bronifty/codes/remixDir/remix/build/node_modules/@remix-run/dev/dist node_modules/@remix-run/dev
 ```
 
 ![](./media/vite-plugin.png)
 
+
+
+
+```sh
+yarn add -D vite-plugin-svgr
+```
 
