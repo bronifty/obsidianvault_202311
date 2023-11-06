@@ -1,4 +1,6 @@
-[remix ❤️ vite ⚡️](https://www.youtube.com/watch?v=B_vIp4xETl4)
+[remix docs 💿 vite plugin](https://remix.run/docs/en/main/future/vite)
+[remix 💿 vite ⚡️](https://www.youtube.com/watch?v=B_vIp4xETl4)
+
 
 - 2 templates
 - standard vite plugin
