@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "remix-vite/README.md",
+                "file": "remix-vite/mig.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "remix-vite/README.md",
+                "file": "remix-vite/mig.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "remix-vite/README.md",
+                "file": "remix-vite/mig.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "remix-vite/README.md"
+                "file": "remix-vite/mig.md"
               }
             }
           }
@@ -146,15 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "64aaae11b6db3a23",
+  "active": "f281dbfe820acc6d",
   "lastOpenFiles": [
-    "remix-vite/media",
+    "remix-vite/README.md",
     "remix-vite/media/vite-plugin.png",
+    "remix-vite/mig.md",
+    "remix-vite/media",
     "remix-vite/bookmarks_11_3_23.html",
     "remix-vite/bookmarks_11_3_23 2.html",
     "remix-vite/bookmarks_11_3_23 1.html",
     "github/Github.md",
-    "remix-vite/README.md",
     "remix-vite",
     "github/Untitled.md",
     "joshcomeau/README.md",
@@ -166,7 +167,6 @@
     "github",
     "jacobmgevans/demo/README.md",
     "jacobmgevans/demo/marcs-observable.md",
-    "joshcomeau",
-    "jacobmgevans/demo"
+    "joshcomeau"
   ]
 }
