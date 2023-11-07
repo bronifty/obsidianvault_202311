@@ -70,11 +70,11 @@ export default app;
 import { unstable_vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-// import svgr from "vite-plugin-svgr";
 import mdx from "@mdx-js/rollup";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-// import highlight from "rehype-highlight";
+import highlight from "rehype-highlight";
+import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [
@@ -88,8 +88,10 @@ export default defineConfig({
     }),
     mdx({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+      rehypePlugins: [highlight],
     }),
     tsconfigPaths(),
+    svgr(),
   ],
 });
 
@@ -99,7 +101,7 @@ export default defineConfig({
 	- replace the package.json wholesale with this one
 ```json
 {
-  "name": "my-remix-app",
+  "name": "npx-create-remix-at-latest",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -107,20 +109,19 @@ export default defineConfig({
     "clean:dist": "rm -rf node_modules/@remix-run/dev/dist",
     "init:dist": "cp -r ./@remix-run/dev/dist/ node_modules/@remix-run/dev/",
     "initialize": "npm run clean:dist && npm run init:dist",
-    "build": "echo \"make sure you set the vercel build output dir to public/build; the 'vercel-build' command will run in prod and deploy to vercel \"",
+    "vercel-dev": "node ./api/server.mjs",
     "vercel-build": "npm run initialize && vite build && vite build --ssr",
-    "dev": "node ./api/server.mjs",
-    "start": "cross-env NODE_ENV=production node ./api/server.mjs",
-    "local": "cross-env NODE_ENV=production node ./server.mjs",
-    "local-dev": "node ./server.mjs",
+    "build": "npm run vercel-build",
+    "dev": "node ./server.mjs",
+    "start": "cross-env NODE_ENV=production node ./server.mjs",
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/css-bundle": "^2.2.0",
     "@remix-run/express": "^2.2.0",
     "@remix-run/node": "^2.2.0",
     "@remix-run/react": "^2.2.0",
     "express": "^4.18.2",
+    "highlight.js": "^11.9.0",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -134,10 +135,12 @@ export default defineConfig({
     "@types/react-dom": "^18.2.7",
     "cross-env": "^7.0.3",
     "eslint": "^8.38.0",
+    "rehype-highlight": "^7.0.0",
     "remark-frontmatter": "^5.0.0",
     "remark-mdx-frontmatter": "^4.0.0",
     "typescript": "^5.1.6",
     "vite": "^4.5.0",
+    "vite-plugin-svgr": "^4.1.0",
     "vite-tsconfig-paths": "^4.2.1"
   },
   "engines": {
