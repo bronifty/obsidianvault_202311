@@ -62,3 +62,15 @@ export default defineConfig({
   },  
   ```
 
+### Package Scripts
+```json
+"scripts": {
+    "clean:dist": "rm -rf node_modules/@remix-run/dev/dist",
+    "init:dist": "cp -r ../@remix-run/dev/dist/ node_modules/@remix-run/dev/",
+    "build": "vite build && vite build --ssr",
+    "dev": "node ./api/server.mjs",
+    "start": "cross-env NODE_ENV=production node ./api/server.mjs",
+    "typecheck": "tsc"
+},
+```
+
