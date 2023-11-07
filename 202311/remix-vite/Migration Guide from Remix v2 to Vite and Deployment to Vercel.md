@@ -1,8 +1,14 @@
 - [working repo](https://github.com/bronifty/vercel-remix-vite-deploy-v2-mdx.git)
 - [remix.run/docs future vite](https://remix.run/docs/en/main/future/vite)
 
+> Remove remix.config.js if you are migrating otherwise it will confuse the vercel build API
+
 ### Required Vercel Deployment Artifacts
 1. vercel.json
+	- source is inside the build output directory, which is defined in the vercel settings to match the vite.config.ts file "assetsBuildDirectory" property's value (default is public/build)
+	- destination is a custom express server defined in vercel's api folder, which imports the result of the server build, which is also defined in vite.config.ts as "serverBuildPath", which defaults to: build/index.js. 
+		- destination points to: api/server.mjs, which points to: serverBuildPath in vite.config.ts
+
 ```json
 {
   "rewrites": [
@@ -90,9 +96,14 @@ export default defineConfig({
 ```
 
 4. package.json
-	- deps depend on what you're using, but you'll need vite at the very least if it's not installed as well as the plugin from @remix-run/dev, but there is a GOTCHA! if you're using MDX because the current @remix-run/dev package will build successfully, but the render will fail on any mdx consumer pages; so you'll either have to wait until the fix comes in or use my repo with the custom module included which has incorporated the fix. that is reflected here in the scripts for initialize
+	- replace the package.json wholesale with this one
 ```json
-"scripts": {
+{
+  "name": "my-remix-app",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
     "clean:dist": "rm -rf node_modules/@remix-run/dev/dist",
     "init:dist": "cp -r ./@remix-run/dev/dist/ node_modules/@remix-run/dev/",
     "initialize": "npm run clean:dist && npm run init:dist",
@@ -104,5 +115,35 @@ export default defineConfig({
     "local-dev": "node ./server.mjs",
     "typecheck": "tsc"
   },
+  "dependencies": {
+    "@remix-run/css-bundle": "^2.2.0",
+    "@remix-run/express": "^2.2.0",
+    "@remix-run/node": "^2.2.0",
+    "@remix-run/react": "^2.2.0",
+    "express": "^4.18.2",
+    "isbot": "^3.6.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@mdx-js/rollup": "^3.0.0",
+    "@remix-run/dev": "^2.2.0",
+    "@remix-run/eslint-config": "^2.2.0",
+    "@types/express": "^4.17.20",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.38.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-mdx-frontmatter": "^4.0.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.5.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
 ```
 
