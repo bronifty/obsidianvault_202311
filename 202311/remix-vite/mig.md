@@ -1,16 +1,11 @@
-- let's start with the templates - create-remix@latest standard and unstable-vite
+### Remix Vite Plugin Templates
 
 ```sh
 npx create-remix@latest
 npx create-remix@latest --template remix-run/remix/templates/unstable-vite-express
 ```
 
-- the first thing i want to do is cp remix.config.js vite.config.ts and add some vite plugin specific configs as well as yarn add the plugin as a dev dependency. also we need to make sure remix-run node react and express are installed as runtime deps
-
-```sh
-yarn add -D @remix-run/dev
-yarn add @remix-run/express
-```
+### Vite Config
 
 ```ts
 // vite.config.ts
@@ -38,7 +33,32 @@ export default defineConfig({
     tsconfigPaths(),
   ],
 });
-
 ```
 
+### Package Deps
+```json
+"dependencies": {
+    "@remix-run/express": "^2.2.0",
+    "@remix-run/node": "^2.2.0",
+    "@remix-run/react": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "isbot": "^3.6.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@mdx-js/rollup": "^3.0.0",
+    "@remix-run/dev": "^2.2.0",
+    "@remix-run/eslint-config": "^2.2.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.38.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-mdx-frontmatter": "^4.0.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.5.0",
+    "vite-plugin-svgr": "^4.1.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  },  
+  ```
 
