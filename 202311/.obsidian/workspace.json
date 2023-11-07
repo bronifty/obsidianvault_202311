@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "remix-vite/mig.md",
+                "file": "remix-vite/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "remix-vite/mig.md",
+                "file": "remix-vite/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "remix-vite/mig.md",
+                "file": "remix-vite/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "remix-vite/mig.md"
+                "file": "remix-vite/README.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "f281dbfe820acc6d",
   "lastOpenFiles": [
-    "remix-vite/README.md",
     "remix-vite/mig.md",
+    "remix-vite/README.md",
     "remix-vite/media/vite-plugin.png",
     "remix-vite/media",
     "remix-vite/bookmarks_11_3_23.html",
