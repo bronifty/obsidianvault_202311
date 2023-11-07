@@ -58,6 +58,7 @@ app.all(
 export default app;
 ```
 3. vite.config.ts
+	- some or all of this (work in progress as you add feats)
 ```ts
 // vite.config.ts
 import { unstable_vitePlugin as remix } from "@remix-run/dev";
@@ -86,5 +87,22 @@ export default defineConfig({
   ],
 });
 
+```
+
+4. package.json
+	- deps depend on what you're using, but you'll need vite at the very least if it's not installed as well as the plugin from @remix-run/dev, but there is a GOTCHA! if you're using MDX because the current @remix-run/dev package will build successfully, but the render will fail on any mdx consumer pages; so you'll either have to wait until the fix comes in or use my repo with the custom module included which has incorporated the fix. that is reflected here in the scripts for initialize
+```json
+"scripts": {
+    "clean:dist": "rm -rf node_modules/@remix-run/dev/dist",
+    "init:dist": "cp -r ./@remix-run/dev/dist/ node_modules/@remix-run/dev/",
+    "initialize": "npm run clean:dist && npm run init:dist",
+    "build": "echo \"make sure you set the vercel build output dir to public/build; the 'vercel-build' command will run in prod and deploy to vercel \"",
+    "vercel-build": "npm run initialize && vite build && vite build --ssr",
+    "dev": "node ./api/server.mjs",
+    "start": "cross-env NODE_ENV=production node ./api/server.mjs",
+    "local": "cross-env NODE_ENV=production node ./server.mjs",
+    "local-dev": "node ./server.mjs",
+    "typecheck": "tsc"
+  },
 ```
 
