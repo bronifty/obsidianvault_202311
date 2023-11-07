@@ -16,7 +16,11 @@ yarn add @remix-run/express
 // vite.config.ts
 import { unstable_vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
-// import { mdx } from "@mdx-js/rollup";
+import mdx from "@mdx-js/rollup";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkMdxFrontmatter from "remark-mdx-frontmatter";
+import tsconfigPaths from "vite-tsconfig-paths";
+import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [
@@ -27,8 +31,14 @@ export default defineConfig({
       publicPath: "/build/",
       serverBuildPath: "build/index.js",
     }),
+    mdx({
+      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+    }),
+    svgr(),
+    tsconfigPaths(),
   ],
 });
 
 ```
+
 
