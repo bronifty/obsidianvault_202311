@@ -1,0 +1,2 @@
+- [working repo](https://github.com/bronifty/vercel-remix-vite-deploy-v2-mdx.git)
+- [remix.run/docs future vite](https://remix.run/docs/en/main/future/vite)

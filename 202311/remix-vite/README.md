@@ -245,3 +245,10 @@ export default function App() {
   );
 }
 ```
+
+### Deploy to Vercel
+
+- npx vercel dev and npx vercel - customize build output settings (the frontend) 
+```sh
+
+```
