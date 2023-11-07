@@ -82,12 +82,23 @@ title: Hello from MDX
 ---
 
 export const meta = () => {
-return [{ title: frontmatter.title}]
-}
+  return [{ title: frontmatter.title }];
+};
 
 # hello mdx
 
 Another line
+
+```ts
+export default function Test() {
+  return (
+    <>
+      <div>Test</div>
+    </>
+  );
+}
+```
+
 ```
 - app/routes/blah.tsx
 ```tsx
@@ -98,6 +109,35 @@ export default function About() {
     <>
       <h1>frontmatter.title: {frontmatter.title}</h1>
       <Component />
+    </>
+  );
+}
+```
+
+### env.d.ts
+
+```ts
+/// <reference types="@remix-run/node" />
+/// <reference types="vite/client" />
+/// <reference types="vite-plugin-svgr/client" />
+
+declare module "*.mdx" {
+  let MDXComponent: (props: any) => JSX.Element;
+  export const frontmatter: any;
+  export default MDXComponent;
+}
+```
+
+### svgr
+
+```tsx
+import RemixLogo from "~/assets/remix-logo-glowing-R.svg?react";
+
+export default function Index() {
+  return (
+    <>
+      <RemixLogo width={40} height={40} stroke="red" strokeWidth={15} />
+      <div>test</div>
     </>
   );
 }
