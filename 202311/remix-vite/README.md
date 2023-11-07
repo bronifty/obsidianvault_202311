@@ -1,5 +1,10 @@
 - [remix docs 💿 vite ⚡️ plugin](https://remix.run/docs/en/main/future/vite)
 - [remix 💿 vite ⚡️](https://www.youtube.com/watch?v=B_vIp4xETl4)
+
+## This is a Vite Plugin Setup and Migration Guide
+### For Vercel Deployment Check Below
+- [vercel deployment](./vercel)
+
 ### Remix Vite Plugin Templates
 
 ```sh
