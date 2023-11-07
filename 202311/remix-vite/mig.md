@@ -74,3 +74,32 @@ export default defineConfig({
 },
 ```
 
+### MDX Consumer
+- app/content/blah.mdx
+```mdx
+---
+title: Hello from MDX
+---
+
+export const meta = () => {
+return [{ title: frontmatter.title}]
+}
+
+# hello mdx
+
+Another line
+```
+- app/routes/blah.tsx
+```tsx
+import Component, { frontmatter } from "../content/blah.mdx";
+
+export default function About() {
+  return (
+    <>
+      <h1>frontmatter.title: {frontmatter.title}</h1>
+      <Component />
+    </>
+  );
+}
+```
+
