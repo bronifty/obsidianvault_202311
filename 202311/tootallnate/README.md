@@ -9,8 +9,14 @@ hey Nate! sorry just saw this. ill check and circle back with you
 
 Vite SSR 
 
+
+
 Links:
 - [vite-plugin-ssr](https://vite-plugin-ssr.com/)
 - [vike.dev/vercel](https://vike.dev/vercel#api-route)
 - [github vite plugin vercel deprecated](https://github.com/magne4000/vite-plugin-vercel#usage-with-vike)
 - [github vite plugin vercel vike](https://github.com/magne4000/vite-plugin-vercel/blob/main/packages/vike-integration/README.md)
+
+### Background
+- https://vitejs.dev/config/server-options.html
+- https://vitejs.dev/guide/ssr.html#vite-cli
