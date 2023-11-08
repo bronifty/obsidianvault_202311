@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "remix-vite/README.md",
+                "file": "theprimeagen/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "remix-vite/README.md",
+                "file": "theprimeagen/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "remix-vite/README.md",
+                "file": "theprimeagen/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "remix-vite/README.md"
+                "file": "theprimeagen/README.md"
               }
             }
           }
@@ -148,26 +148,28 @@
   },
   "active": "f281dbfe820acc6d",
   "lastOpenFiles": [
-    "remix-vite/vercel.md",
     "remix-vite/README.md",
+    "theprimeagen/README.md",
+    "theprimeagen",
+    "remix-vite/vercel.md",
+    "github/Github.md",
+    "github/slides-2022.pdf",
+    "github/Untitled.md",
+    "wing/README.md",
+    "wing",
     "remix-vite/media/vite-plugin.png",
     "remix-vite/mig.md",
     "remix-vite/media",
     "remix-vite/bookmarks_11_3_23.html",
     "remix-vite/bookmarks_11_3_23 2.html",
     "remix-vite/bookmarks_11_3_23 1.html",
-    "github/Github.md",
     "remix-vite",
-    "github/Untitled.md",
     "joshcomeau/README.md",
     "github/github_actions/github-actions.md",
     "github/github_actions/github-actions.pdf",
     "github/github_actions/git-review.md",
-    "github/slides-2022.pdf",
     "github/github_actions",
-    "github",
     "jacobmgevans/demo/README.md",
-    "jacobmgevans/demo/marcs-observable.md",
-    "joshcomeau"
+    "jacobmgevans/demo/marcs-observable.md"
   ]
 }
