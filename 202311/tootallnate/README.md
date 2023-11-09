@@ -18,5 +18,12 @@ Links:
 - [github vite plugin vercel vike](https://github.com/magne4000/vite-plugin-vercel/blob/main/packages/vike-integration/README.md)
 
 ### Background
-- https://vitejs.dev/config/server-options.html
-- https://vitejs.dev/guide/ssr.html#vite-cli
+- Vite
+	- https://vitejs.dev/config/server-options.html
+	- https://vitejs.dev/guide/ssr.html#vite-cli
+
+- Remix 
+	- [pedro vite remix nyx](https://www.youtube.com/watch?v=O2FleUlJIoo)
+	- [RPF and Michael Jackson Roadmap](https://www.youtube.com/watch?v=i8eb83XDFNg)
+
+
